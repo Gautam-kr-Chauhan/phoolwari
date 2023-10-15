@@ -1,0 +1,19 @@
+.error{
+    color: red;
+}
+.success{
+    color:green;
+}
+.carousel-item{
+    height: 350px;
+}
+
+.col-md-1{
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: 400;
+    text-emphasis-color: red;
+    border: 2px solid yellowgreen;
+    border-radius: 10px;
+}
+:-moz-any()
