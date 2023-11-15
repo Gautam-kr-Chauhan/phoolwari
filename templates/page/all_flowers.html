@@ -1,11 +1,147 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}|| all flowers{% endblock title %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/flower.css' %}">
+{% endblock extra_css %}
+
 {% block content %}
-    <h2>inside All flower page</h2>
-    <p>choose a flower</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quia?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem 
-        impedit maiores neque natus fuga atque error, dolores porro vel laudantium 
-        dolore officia rem unde sequi illum nulla quis. Iure, quisquam?</p>
+
+
+
+<div class="row">
+    <div class="col-md-2">
+        {% include 'page/sidebar.html' %}
+    </div>
+
+    <div class="col-md-10">
+
+        <div class="container">
+            <div class="row">
+        
+                <!-- Card 1 -->
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= "{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/orchids/2.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= "{% static  'images/images_flowers/pink_lily/11.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= "{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src= "{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{% static  'images/images_flowers/floral_lily/1.webp' %}" class="card-img-top card-img-custom" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>      
+</div>     
+        
 {% endblock content %}
 
+<<<<<<< Updated upstream
+=======
+bjkjbjkjghjhygguyuhbhu
+>>>>>>> Stashed changes
