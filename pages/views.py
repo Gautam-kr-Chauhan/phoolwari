@@ -7,8 +7,8 @@ def hello(request):
 def index(request):
     return render(request,'page/index.html')
 
-def heritage(request):
-    return render(request,'page/heritage.html')
+def about(request):
+    return render(request,'page/about2.html')
 
 
 

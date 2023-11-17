@@ -1,6 +1,6 @@
 from django.urls import path
-from pages.views import index,heritage
+from pages.views import index,about
 urlpatterns = [
     path('',index,name='index'),
-    path('heritage',heritage,name="heritage"),
+    path('about',about,name="about"),
 ]
