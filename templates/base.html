@@ -28,6 +28,7 @@
           </form>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
+              <a class="btn border border-black m-2 rounded-0 " href="{% url "about" %}">about us</a>
                 {% if user.is_authenticated %}
                   <li class="nav-item">
                     <a class="btn border border-black m-2 rounded-0 " href="">cart<i class="fa-solid fa-cart-shopping fa-lg"></i></a>
