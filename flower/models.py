@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Category(models.Model):
     category = models.CharField(max_length=255)
-
+    image = models.ImageField(upload_to="category_images")
     def __str__(self):
         return self.category
 
@@ -21,6 +21,7 @@ class Flower(models.Model):
     price = models.FloatField()
     
     seasonality_option = [
+        ('all','all'),
         ('Spring','Spring'),
         ('Summer','Summer'),
         ('Autumn','Autumn'),
@@ -32,5 +33,7 @@ class Flower(models.Model):
     is_available = models.BooleanField(default=True)
     image = models.ImageField(upload_to="flower_images")
     vase_life=models.CharField(max_length=100)
+    origin=models.CharField(max_length=100,default='india')
     def __str__(self):
         return self.name
+    
