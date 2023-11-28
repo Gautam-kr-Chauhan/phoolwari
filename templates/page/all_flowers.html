@@ -5,14 +5,14 @@
     <div class="col-md-2">
         {% include 'sidebar.html' %}
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10 ">
         <div class="container my-5">
             {% if flowers %}
             <div class="row">
                 {% for flower in flowers %}
-                <div class="col-sm-2">
-                    <div class="card border-0 m-1">
-                        <img src="{{flower.image.url}}" class="card-img-top" style="height: 175px;">
+                <div class="col-lg-4 shadow-sm">
+                    <div class="card border-0 ">
+                        <img src="{{flower.image.url}}" class="card-img-top" style="height: 330px;">
                         <div class="card-body p-0">
                             <h6 class="card-text" style="height: 50px;">{{flower.name}}</h6>
                             <p class="my-1"><i class="fa-solid fa-indian-rupee-sign"></i> {{flower.price}}</p>
