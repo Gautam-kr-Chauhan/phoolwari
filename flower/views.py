@@ -124,6 +124,7 @@ def place_order(request):
             orders.append(order)
     Order.objects.bulk_create(orders)
     
+<<<<<<< HEAD
     subject="Order placed sucesssfully"
     mail_context={
         "username":request.user.first_name+" "+request.user.last_name,
@@ -141,3 +142,6 @@ def place_order(request):
     send_mail(subject=subject,message=plain_message,from_email=from_email,recipient_list=to,fail_silently=False)
     request.session['cart_items']={} 
     return redirect('index')
+=======
+    return render(request,"page/all_flowers.html",context)
+>>>>>>> 611adab85b528f167d29332c7c53baa989accfa1
