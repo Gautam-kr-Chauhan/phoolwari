@@ -1,4 +1,6 @@
 from django.db import models
+from user.models import Address
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Category(models.Model):
@@ -36,4 +38,28 @@ class Flower(models.Model):
     origin=models.CharField(max_length=100,default='india')
     def __str__(self):
         return self.name
+
+class Order(models.Model):
+    STATUS_OPTION=[
+        ("placed","placed"),
+        ("packed","packed"),
+        ("shipped","shipped"),
+        ("delivered","delivered"),
+        ("canceled","canceled")
+    ]
+    PAYMENT_MODE=[
+        ("cod","cod"),
+        ("online","online")
+    ]
+    user=models.ForeignKey(User,on_delete=models.DO_NOTHING)
+    flower=models.ForeignKey(Flower,on_delete=models.DO_NOTHING)
+    address=models.ForeignKey(Address,on_delete=models.DO_NOTHING)
+    quantity=models.IntegerField()
+    price=models.FloatField()
+    status=models.CharField(max_length=20,choices=STATUS_OPTION,default='placed')
+    payment_method=models.CharField(max_length=20,choices=STATUS_OPTION)
+    created_at=models.DateTimeField(auto_now_add=True)
+    updated_at=models.DateTimeField( auto_now=True)
     
+    def __str__(self):
+        return self.user+" "+self.status
