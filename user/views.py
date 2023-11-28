@@ -3,6 +3,7 @@ from django.contrib.auth.models import User # User Model
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from user.models import Address
 # from .models import Flower 
 
 # Create your views here.
@@ -66,17 +67,31 @@ def signout(request):
     logout(request)
     return render(request, 'user/signin.html')
 
-# def add_flowers(request):
-#     if request.method=='POST':
-#         type=request.POST.get('type')
-#         name=request.POST.get('name')
-#         quantity=request.POST.get('quantity')
-#         flower=Flower(
-#          user=request.user,
-#          type=type,
-#          name=name,
-#          quantity=quantity   
-#         )
-#         print(flower.name,flower.type,flower.quantity)
-#         flower.save()
-#     return redirect('index')
+def add_address(request):
+    if request.method=="POST":
+        full_name=request.POST.get('full_name')
+        house_address=request.POST.get('house_address')
+        street_address=request.POST.get('street_address')
+        landmark=request.POST.get('landmark')
+        city=request.POST.get('city')
+        state=request.POST.get('state')
+        country=request.POST.get('country')
+        zip=request.POST.get('zip')
+        mobile=request.POST.get('mobile')
+        
+        address=Address(
+            user=request.user,
+            full_name=full_name,
+            house_address=house_address,
+            street_address=street_address,
+            landmark=landmark,
+            city=city,
+            state=state,
+            country=country,
+            zip=zip,
+            mobile=mobile
+            
+        )
+        print(address)
+        address.save()
+    return redirect('check_out')

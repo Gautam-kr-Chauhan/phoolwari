@@ -29,21 +29,29 @@
           </form>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
-              <a class="btn border border-black m-2 rounded-0 " href="{% url "about" %}">about us</a>
+                <li class="nav-item d-flex flex-column justify-content-center align-items-center text-center">
+                  <a class="nav-link" href="{% url "all_flowers" %}"><i class="fa-solid fa-fan fa-lg"></i><br>All flowers</a>
+                </li>
+                <li class="nav-item d-flex flex-column justify-content-center align-items-center text-center">
+                  <a class="nav-link" href="{% url "about" %}"><i class="fa-solid fa-address-card fa-lg"></i><br>About</a>
+                </li>
                 {% if user.is_authenticated %}
                   <li class="nav-item">
-                    <a class="btn border border-black m-2 rounded-0 " href="">cart<i class="fa-solid fa-cart-shopping fa-lg"></i></a>
-                  </li> 
-                    <li class="nav-item">welcome {{user.first_name}}</h3></li>
+                    <a class="btn  rounded-0 " href="{% url "cart" %}"><i class="fa-solid fa-cart-shopping fa-lg"></i><br>cart</a>
+                  </li>
+                  <div class ='d-flex flex-column justify-content-center align-items-center text-center'>
+
+                    <li class="nav-item "><i class="fa-solid fa-circle-user fa-lg" ></i><br>Hi {{user.first_name}}</h3></li>
+                  </div>
                     <li class="nav-item">
-                        <a class="btn border border-black m-2 rounded-0 " href="{% url "signout" %}">log out</a>
+                        <a class="btn border border-black m-2 rounded-0 btn-outline-danger" href="{% url "signout" %}">log out</a>
                     </li> 
                 {% else %}
-                    <li class="nav-item">
+                    {% comment %} <li class="nav-item">
                         <a class="btn border border-black m-2 rounded-0 " href="{% url "signup" %}">Sign up</a>
-                    </li>
+                    </li> {% endcomment %}
                     <li class="nav-item">
-                        <a class="btn bg-black text-white m-2 rounded-0 " href="{% url "signin" %}">Log In</a>
+                        <a class="btn border border-black m-2 rounded-0 btn-outline-warning " href="{% url "signin" %}">Log In</a>
                     </li>
                 {% endif %}
               </ul>
@@ -52,7 +60,7 @@
     </nav>
 
     <!-- dropdown -->
-    <div class="row" style="background-color: cornsilk;">
+    {% comment %} <div class="row" style="background-color: cornsilk;">
         <div class="col-md-1 nav2">Fesitval Gifts</div>
         <div class="col-md-1">Birthday</div>
         <div class="col-md-1">Anniversary</div>
@@ -65,7 +73,7 @@
         <div class="col-md-1">Occasions</div>
         <div class="col-md-1">Bulk-Order</div>
         <div class="col-md-1">One-day-Delivery</div>  
-      </div>
+      </div> {% endcomment %}
     {% block content %}
     
     {% endblock content %}

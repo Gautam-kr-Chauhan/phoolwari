@@ -42,21 +42,21 @@
 <!-- Cards -->
 <div class="container">
   {% comment %} category of flowers {% endcomment %}
+  <div class="row">
   {% for c in categories %}
-  yutykutgu
-    <div class="col-md-4">
-      <div class="card">
-          <img src="{{c.image.url}}" class="card-img-top" alt="Card Image">
-          <div class="card-body">
-            <a href="{% url 'flower_category' c.id %}" class="text-decoration-none"> 
-              <h5 class="card-title">{{c.category}} </h5> </a>
-              <p class="card-text">Expore wide variety of freshly picked flower directly from garden</p>
-          </div>
-      </div>
-  </div>
-  {% endfor %}
-  ryurt
     
+      <div class="col-md-4">
+        <div class="card"onmouseover="popCard(this)" onmouseout="resetCard(this)">
+            <img src="{{c.image.url}}" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+              <a href="{% url 'flower_category' c.id  %}" class="text-decoration-none"> 
+                <h5 class="card-title">{{c.category}} </h5> </a>
+                <p class="card-text">Expore wide variety of freshly picked flower directly from garden</p>
+            </div>
+        </div>
+      </div>
+  {% endfor %}
+</div>  
 {% comment %}  {% endcomment %}
     <div class="row">
           <div class="col-md-6">
@@ -132,5 +132,22 @@
 </footer>
 
 {% endblock content %}
+
+{% block extrajs %}
+<script>
+  // JavaScript functions to handle the card animation
+  function popCard(card) {
+      card.style.transform = "scale(1.1)";
+      card.style.transition="0.3s ease-in-out"
+      card.style.boxShadow = "20px rgba(0, 0, 0, 0.2)";
+  }
+
+  function resetCard(card) {
+      card.style.transform = "scale(1)";
+      card.style.boxShadow = "none";
+  }
+</script>
+
+{% endblock extrajs %}
 
 
