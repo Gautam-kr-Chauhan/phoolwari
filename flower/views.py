@@ -23,4 +23,4 @@ def flower_category(request,cid):
     }
     #print(categories)
     
-    return render(request,"page/index.html",context)
+    return render(request,"page/all_flowers.html",context)
